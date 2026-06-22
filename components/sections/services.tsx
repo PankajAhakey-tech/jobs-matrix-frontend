@@ -66,20 +66,23 @@ export function ServicesSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="mb-20 text-center"
+          className="mb-16 sm:mb-20 text-center"
         >
-          <span className="inline-flex rounded-full bg-primary/10 px-4 py-2 text-sm font-semibold text-primary">
+          <span className="inline-flex items-center rounded-full border border-primary/20 bg-primary/10 px-4 py-2 text-sm font-semibold text-primary">
             Our Services
           </span>
 
-          <h2 className="mt-6 text-4xl font-bold tracking-tight text-foreground lg:text-5xl">
-            Recruitment Solutions Designed For Growth
+          <h2 className="mt-6 text-3xl font-bold leading-tight text-slate-900 sm:text-4xl lg:text-6xl">
+            Recruitment Solutions
+            <span className="block bg-gradient-to-r from-primary via-blue-600 to-sky-500 bg-clip-text text-transparent">
+              Designed For Growth
+            </span>
           </h2>
 
-          <p className="mx-auto mt-5 max-w-3xl text-lg text-muted-foreground">
-            From startups to established enterprises, JOBS Matrix delivers
-            recruitment solutions that help organizations build stronger,
-            high-performing teams.
+          <p className="mx-auto mt-6 max-w-3xl text-base leading-8 text-slate-600 sm:text-lg">
+            From startups to large enterprises, JOBS Matrix delivers
+            specialized recruitment solutions that help businesses hire
+            faster, reduce hiring risks and build high-performing teams.
           </p>
         </motion.div>
 
@@ -102,7 +105,24 @@ export function ServicesSection() {
                 whileHover={{
                   y: -10,
                 }}
-                className="group relative overflow-hidden rounded-3xl border border-slate-200 bg-white p-8 shadow-sm transition-all duration-300 hover:border-primary/20 hover:shadow-2xl"
+
+                className="
+group
+relative
+overflow-hidden
+rounded-3xl
+border
+border-slate-200
+bg-white
+p-6
+sm:p-8
+shadow-lg
+transition-all
+duration-500
+hover:-translate-y-2
+hover:border-primary/20
+hover:shadow-[0_25px_50px_rgba(0,0,0,0.08)]
+"
               >
                 {/* Gradient Top Border */}
                 <div className="absolute left-0 top-0 h-1 w-full bg-gradient-to-r from-primary to-blue-600" />
@@ -135,35 +155,87 @@ export function ServicesSection() {
         </div>
 
         {/* Bottom CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          viewport={{ once: true }}
-          className="mt-20 rounded-3xl border border-primary/10 bg-gradient-to-r from-primary via-blue-700 to-primary p-10 text-center text-white shadow-2xl"
-        >
-          <h3 className="text-3xl font-bold">
-            Looking for the Right Talent?
-          </h3>
+      <motion.div
+  initial={{ opacity: 0, y: 30 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  className="
+  mt-20
+  rounded-[32px]
+  bg-gradient-to-r
+  from-primary
+  via-blue-600
+  to-sky-500
+  p-8
+  sm:p-12
+  text-center
+  text-white
+  shadow-2xl
+"
+>
+  <h3 className="text-2xl font-bold sm:text-4xl">
+    Looking for the Right Talent?
+  </h3>
 
-          <p className="mx-auto mt-4 max-w-2xl text-white/90">
-            Let JOBS Matrix help you connect with qualified, pre-screened
-            professionals who can contribute to your business growth from day one.
-          </p>
+  <p className="mx-auto mt-4 max-w-2xl text-white/90 text-sm sm:text-lg">
+    Partner with JOBS Matrix and gain access to qualified,
+    pre-screened professionals ready to contribute to your
+    organization from day one.
+  </p>
 
-          <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <button className="inline-flex items-center gap-2 rounded-[24px] border border-[rgba(255,255,255,0.25)] bg-[rgba(255,255,255,0.12)] px-8 py-4 font-semibold text-white shadow-[0_8px_32px_rgba(0,0,0,0.12)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-[0_15px_40px_rgba(37,99,235,0.25)] hover:bg-gradient-to-r hover:from-[rgba(37,99,235,0.9)] hover:to-[rgba(59,130,246,0.8)]">
-              Business Enquiry
-            </button>
+  <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center">
 
-            <Link
-              href="#contact"
-              className="inline-flex items-center gap-2 rounded-[24px] border border-[rgba(255,255,255,0.3)] bg-[rgba(255,255,255,0.08)] px-8 py-4 font-semibold text-white shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-all duration-300 ease-out hover:bg-[rgba(255,255,255,0.15)] hover:-translate-y-0.5"
-            >
-              Looking For Job
-            </Link>
-          </div>
-        </motion.div>
+    <Link
+      href="#contact"
+      className="
+      inline-flex
+      w-full
+      sm:w-auto
+      items-center
+      justify-center
+      rounded-2xl
+      bg-white
+      px-8
+      py-4
+      font-semibold
+      text-primary
+      shadow-lg
+      transition-all
+      duration-300
+      hover:-translate-y-1
+      hover:shadow-xl
+      "
+    >
+      Business Enquiry
+    </Link>
+
+    <Link
+      href="#contact"
+      className="
+      inline-flex
+      w-full
+      sm:w-auto
+      items-center
+      justify-center
+      rounded-2xl
+      border
+      border-white/30
+      bg-white/10
+      px-8
+      py-4
+      font-semibold
+      text-white
+      backdrop-blur-sm
+      transition-all
+      duration-300
+      hover:bg-white/20
+      "
+    >
+      Looking For Job
+    </Link>
+
+  </div>
+</motion.div>
 
       </div>
     </section>
