@@ -54,13 +54,13 @@ export function ProcessTimelineSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="mb-20 text-center"
+          className="mb-14 sm:mb-20 text-center"
         >
           <span className="inline-flex rounded-full border border-primary/20 bg-primary/10 px-4 py-2 text-sm font-semibold text-primary">
             Recruitment Process
           </span>
 
-          <h2 className="mt-6 text-4xl font-bold tracking-tight text-foreground lg:text-5xl">
+          <h2 className="mt-6 text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
             Our Proven Recruitment Methodology
           </h2>
 
@@ -73,8 +73,9 @@ export function ProcessTimelineSection() {
         {/* Process Steps */}
         <div className="relative">
           {/* Desktop Connecting Line */}
-          <div className="absolute left-0 right-0 top-10 hidden h-1 bg-gradient-to-r from-primary via-blue-500 to-primary lg:block" />
+          <div className="absolute left-10 top-0 bottom-0 w-[2px] bg-gradient-to-b from-primary/30 via-blue-400 to-primary/30 lg:hidden" />
 
+          <div className="absolute left-0 right-0 top-10 hidden h-[2px] bg-gradient-to-r from-primary via-blue-500 to-primary lg:block" />
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
             {steps.map((step, index) => (
               <motion.div
@@ -110,7 +111,25 @@ export function ProcessTimelineSection() {
                 </motion.div>
 
                 {/* Card */}
-                <div className="group h-full rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition-all duration-300 hover:border-primary/20 hover:shadow-2xl">
+                <div
+                  className="
+    group
+    relative
+    h-full
+    rounded-3xl
+    border
+    border-slate-200/80
+    bg-white/90
+    p-6
+    backdrop-blur-sm
+    shadow-[0_8px_30px_rgba(0,0,0,0.04)]
+    transition-all
+    duration-500
+    hover:-translate-y-2
+    hover:border-primary/20
+    hover:shadow-[0_20px_50px_rgba(37,99,235,0.12)]
+  "
+                >
                   <h3 className="mb-3 text-lg font-semibold text-foreground transition-colors group-hover:text-primary">
                     {step.title}
                   </h3>
