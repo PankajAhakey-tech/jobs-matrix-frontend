@@ -105,7 +105,7 @@ export function CompanyOverviewSection() {
               </Link>
 
               <Link
-                href="#jobs"
+                href="#contact"
                 className="
                 group
                 inline-flex

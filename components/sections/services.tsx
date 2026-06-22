@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 import {
   Users,
   Laptop,
@@ -51,7 +52,7 @@ const services = [
 
 export function ServicesSection() {
   return (
-    <section className="relative overflow-hidden py-24 lg:py-32">
+    <section id="services" className="relative overflow-hidden py-24 lg:py-32">
 
       {/* Background Glow */}
       <div className="absolute left-0 top-0 h-[400px] w-[400px] rounded-full bg-primary/10 blur-[120px]" />
@@ -155,9 +156,12 @@ export function ServicesSection() {
               Business Enquiry
             </button>
 
-            <button className="inline-flex items-center gap-2 rounded-[24px] border border-[rgba(255,255,255,0.3)] bg-[rgba(255,255,255,0.08)] px-8 py-4 font-semibold text-white shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-all duration-300 ease-out hover:bg-[rgba(255,255,255,0.15)] hover:-translate-y-0.5">
+            <Link
+              href="#contact"
+              className="inline-flex items-center gap-2 rounded-[24px] border border-[rgba(255,255,255,0.3)] bg-[rgba(255,255,255,0.08)] px-8 py-4 font-semibold text-white shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-all duration-300 ease-out hover:bg-[rgba(255,255,255,0.15)] hover:-translate-y-0.5"
+            >
               Looking For Job
-            </button>
+            </Link>
           </div>
         </motion.div>
 

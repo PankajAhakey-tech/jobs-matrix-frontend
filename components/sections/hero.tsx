@@ -113,7 +113,7 @@ function HeroSlide({ slide }: { slide: (typeof heroSlides)[0] }) {
   <ArrowRight className="relative z-10 h-4 w-4" />
 </Link>
 
-             <Link href="#jobs" className={heroButtonClass}>
+             <Link href="#contact" className={heroButtonClass}>
   <span
     className="
       absolute inset-0

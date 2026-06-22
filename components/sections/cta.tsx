@@ -5,38 +5,186 @@ import Link from 'next/link'
 
 export function CTASection() {
   return (
-    <section className="w-full py-20 sm:py-32">
-      <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+    <section className="py-16 sm:py-24 lg:py-32">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
         <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="rounded-2xl border border-primary/20 bg-gradient-to-r from-primary/10 via-accent/5 to-primary/10 p-12 sm:p-16 text-center"
+          className="
+            relative
+            overflow-hidden
+            rounded-[32px]
+            bg-gradient-to-br
+            from-slate-900
+            via-slate-800
+            to-blue-950
+            px-6
+            py-12
+            sm:px-10
+            sm:py-16
+            lg:px-16
+            lg:py-20
+            shadow-2xl
+          "
         >
-          <h2 className="mb-4 text-3xl font-bold sm:text-4xl text-foreground text-balance">
-            Ready to Find Your Next Great Hire?
-          </h2>
-          <p className="mx-auto mb-8 max-w-2xl text-lg text-muted-foreground">
-            Let&apos;s discuss how JOBS Matrix can transform your recruitment
-            process and connect you with top talent.
-          </p>
+          {/* Background Glow */}
+          <div className="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-blue-500/20 blur-3xl" />
+          <div className="absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-cyan-400/10 blur-3xl" />
 
-          <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
-            <Link
-              href="#contact"
-              className="inline-flex items-center justify-center gap-2 rounded-[24px] border border-[rgba(255,255,255,0.25)] bg-[rgba(255,255,255,0.12)] px-8 py-4 font-semibold text-white shadow-[0_8px_32px_rgba(0,0,0,0.12)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-[0_15px_40px_rgba(37,99,235,0.25)] hover:bg-gradient-to-r hover:from-[rgba(37,99,235,0.9)] hover:to-[rgba(59,130,246,0.8)]"
+          <div className="relative z-10 text-center">
+
+            <span
+              className="
+                inline-flex
+                items-center
+                rounded-full
+                border
+                border-blue-400/30
+                bg-blue-500/10
+                px-4
+                py-2
+                text-sm
+                font-medium
+                text-blue-200
+              "
             >
-              Schedule a Consultation
-            </Link>
-            <Link
-              href="#services"
-              className="inline-flex items-center justify-center gap-2 rounded-[24px] border border-[rgba(255,255,255,0.3)] bg-[rgba(255,255,255,0.08)] px-8 py-4 font-semibold text-white shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-all duration-300 ease-out hover:bg-[rgba(255,255,255,0.15)] hover:-translate-y-0.5"
+              🚀 Recruitment Solutions That Deliver Results
+            </span>
+
+            <h2
+              className="
+                mx-auto
+                mt-6
+                max-w-4xl
+                text-3xl
+                font-bold
+                text-white
+                sm:text-4xl
+                lg:text-5xl
+                leading-tight
+              "
             >
-              Explore Our Services
-            </Link>
+              Ready to Build a High-Performing Team?
+            </h2>
+
+            <p
+              className="
+                mx-auto
+                mt-5
+                max-w-2xl
+                text-base
+                sm:text-lg
+                text-slate-300
+              "
+            >
+              Partner with JobsMatrix to hire exceptional talent,
+              reduce recruitment time, and strengthen your workforce
+              with candidates who truly fit your business goals.
+            </p>
+
+            <div
+              className="
+                mt-10
+                flex
+                flex-col
+                gap-4
+                sm:flex-row
+                sm:justify-center
+              "
+            >
+              <Link
+                href="#contact"
+                className="
+                  inline-flex
+                  items-center
+                  justify-center
+                  rounded-full
+                  bg-white
+                  px-8
+                  py-4
+                  font-semibold
+                  text-slate-900
+                  shadow-lg
+                  transition-all
+                  duration-300
+                  hover:-translate-y-1
+                  hover:shadow-2xl
+                "
+              >
+                Schedule a Consultation →
+              </Link>
+
+              <Link
+                href="#services"
+                className="
+                  inline-flex
+                  items-center
+                  justify-center
+                  rounded-full
+                  border
+                  border-white/20
+                  bg-white/10
+                  px-8
+                  py-4
+                  font-semibold
+                  text-white
+                  backdrop-blur-sm
+                  transition-all
+                  duration-300
+                  hover:bg-white/20
+                "
+              >
+                Explore Our Services
+              </Link>
+            </div>
+
+            {/* Stats */}
+            <div
+              className="
+                mt-12
+                grid
+                grid-cols-1
+                gap-6
+                border-t
+                border-white/10
+                pt-8
+                sm:grid-cols-3
+              "
+            >
+              <div>
+                <h3 className="text-2xl font-bold text-white">
+                  500+
+                </h3>
+                <p className="text-sm text-slate-400">
+                  Candidates Placed
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-2xl font-bold text-white">
+                  50+
+                </h3>
+                <p className="text-sm text-slate-400">
+                  Hiring Partners
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-2xl font-bold text-white">
+                  95%
+                </h3>
+                <p className="text-sm text-slate-400">
+                  Client Satisfaction
+                </p>
+              </div>
+            </div>
+
           </div>
         </motion.div>
+
       </div>
     </section>
   )

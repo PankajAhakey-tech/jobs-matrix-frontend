@@ -55,8 +55,11 @@ export default function RootLayout({
       lang="en"
       className={`bg-background ${inter.variable} ${jakarta.variable}`}
     >
-      <body className="font-sans antialiased">
-        {children}
+      <body className="font-sans antialiased bg-slate-50">
+        <div className="min-h-screen bg-[linear-gradient(180deg,#f8fafc_0%,#ffffff_20%,#f0f9ff_100%)]">
+          {children}
+        </div>
+
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>

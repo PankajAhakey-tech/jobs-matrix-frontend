@@ -57,7 +57,7 @@ const industries = [
 
 export function IndustriesSection() {
   return (
-    <section className="relative overflow-hidden py-24 lg:py-32">
+    <section id="industries" className="relative overflow-hidden py-24 lg:py-32">
       {/* Background Effects */}
       <div className="absolute left-0 top-0 h-[400px] w-[400px] rounded-full bg-primary/10 blur-[120px]" />
       <div className="absolute right-0 bottom-0 h-[400px] w-[400px] rounded-full bg-blue-500/10 blur-[120px]" />
